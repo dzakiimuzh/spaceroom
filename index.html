@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/acdec55a47.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="file:///D:/Dzaki/font%20awesome/fontawesome-free-5.11.2-web/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+    <title>Property</title>
+    <style>
+        * {
+            font-family: inter-regular;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        @font-face {
+            font-family: inter-semibold;
+            src: url('assets/font/Inter-SemiBold-slnt=0.ttf');
+        }
+
+        @font-face {
+            font-family: inter-regular;
+            src: url('assets/font/Inter-Regular-slnt=0.ttf');
+        }
+
+        .navbar .navbar-nav {
+            font-size: 16px;
+            transform: translateY(4px);
+            color: #5F5F5F;
+        }
+
+        .navbar .navbar-nav .nav-item .cart {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            transform: translateY(-2px);
+            border-radius: 50px;
+
+        }
+
+        .navbar .navbar-nav .nav-item .badge {
+            color: #92B5BB;
+            width: 32px;
+            border-radius: 50px;
+            transform: translateX(8px);
+            line-height: 15px;
+            height: 30px;
+        }
+
+        .jumbotron {
+            height: 101vh;
+            margin-top: -77px;
+            background: url(assets/img/1722\ 1.png);
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        .jumbotron .container {
+            margin-top: 110px;
+        }
+
+        .jumbotron .container h1 {
+            color: #5F5F5F;
+            font-family: inter-semibold;
+            font-size: 55px;
+        }
+
+        .jumbotron .container p {
+            color: rgba(122, 122, 122, 0.6);
+        }
+
+        .jumbotron .input-group {
+            width: 40%;
+            height: 50px;
+            margin-top: 35px;
+            border: none;   
+        }
+
+        .jumbotron .input-group input {
+            height: 50px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .jumbotron .input-group ::-webkit-input-placeholder {
+            color: rgba(0, 0, 0, 0.4);
+            font-size: 16px;
+        }
+
+        .jumbotron .input-group .btn {
+            width: 107px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border: none;
+            background: #92B5BB;
+            color: white;
+        }
+
+        .product-box {
+            height: 100vh;
+            margin-top: 90px;
+        }
+
+        .product-box .navbar-brand {
+            font-size: 45px;
+            font-family: inter-semibold;
+            color: #333333;
+        }
+
+        .product-box .navbar .navbar-nav .chair {
+            color: #EB5757;
+        }
+        .product-box .card-product{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 80px;
+        }
+        .product-box .card-product .catalog{
+            background: rgba(146, 181, 187, 0.2);
+            width: 220px;
+            border-radius: 8px;
+            height: 226px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .product-box .card-product .harga i{
+            color: #F2C94C;
+            font-size: 13px;
+        }
+        .product-box .card-product .harga{
+            width: 220px;
+        }
+        .product-box .card-product span{
+            color: rgba(95, 95, 95, 0.6);
+            font-size: 14px;
+        }
+        .product-box .card-product h3{
+            font-size: 20px;
+        }
+        .product-box .card-product h5{
+            font-size: 22px;
+        }
+        .product-box .card-product .desc{
+            width: 220px;
+        }
+        .photo-box .photo{
+            background: #E9F0F1;
+            position: relative;
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .photo-box{
+            margin-top: 85px;
+        }
+        .photo-box .meja{
+            width: 100%;
+            height: 100%;
+        }
+        .photo-box .photo img{
+            transform: translateY(80px);
+        }
+        .photo-box .photo .badge{
+            position: absolute;
+            font-size: 20px;
+            color: white;
+            letter-spacing: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+           width: 172px;
+            height: 53px;
+            background: #EB5757;
+            left: 0;
+        }
+        .photo-box .row2{
+            margin-top: 70px;
+        }
+        .explore{
+            height: 150vh;
+            margin-top: 250px;
+        }
+        .explore .judul{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .explore .judul h1{
+            font-family: inter-semibold;
+        }
+        .explore .judul .link a{
+            color: rgba(0, 0, 0, 0.4);
+        }
+        .explore .judul .link .ins{
+            color: #EB5757;
+        }
+        .explore .judul .link{
+            width: 280px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .explore .row3{
+            margin-top: 90px;
+        }
+        .explore .row3 .col-md-5 .photos1{
+            background: url('assets/img/Rectangle\ 46.png');
+            background-size: cover;
+            position: relative;
+            border-radius: 8px;
+            width: 100%;
+            height: 416px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: flex-end;
+        }
+        .explore .overlay{
+            position: absolute;
+            border-radius: 8px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        .explore .row3 .col-md-5 .photos1 h3,
+        .explore .row3 .col-md-7 .photos2 h3,
+        .explore .row4 .col-md-4 .photos3 h3{
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-family: inter-semibold;
+        }
+        .explore .row3 .col-md-5 .photos1 .text,
+        .explore .row3 .col-md-7 .photos2 .text,
+        .explore .row4 .col-md-4 .photos3 .text{
+            width: 300px;
+            z-index: 99999;
+            padding-left: 35px;
+            padding-bottom: 30px;
+        }
+        .explore .row3 .col-md-5 .photos1 span,
+        .explore .row3 .col-md-7 .photos2 span{
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .explore .row3 .col-md-7 .photos2{
+            background: url('assets/img/Rectangle\ 47.png');
+            position: relative;
+            border-radius: 8px;
+            width: 100%;
+            height: 416px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: flex-end;
+        }
+        .explore .row4 .col-md-4:nth-child(1) .photos3{
+            background: url('assets/img/Rectangle\ 48.png');
+            background-size: cover;
+            position: relative;
+            border-radius: 8px;
+            width: 100%;
+            height: 386px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: flex-end;
+        }
+        .explore .row4 .col-md-4:nth-child(2) .photos3{
+            background: url('assets/img/Rectangle\ 49.png');
+            background-size: cover;
+            position: relative;
+            border-radius: 8px;
+            width: 100%;
+            height: 386px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: flex-end;
+        }
+        .explore .row4 .col-md-4:nth-child(3) .photos3{
+            background: url('assets/img/Rectangle\ 50.png');
+            background-size: cover;
+            position: relative;
+            border-radius: 8px;
+            width: 100%;
+            height: 386px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: flex-end;
+        }
+        .explore .row4{
+            margin-top: 70px;
+        }
+        .service{
+            margin-top: 230px;
+            background: #E9F0F1;
+            height: 451px;
+        }
+        .service .row{
+            margin-top: 50px;
+            width: 95%;
+            margin: 0 auto;
+        }
+        .service .judul h1{
+            font-family: inter-semibold;
+            color: #333333;
+            font-size: 48px;
+            padding-top: 60px;
+            text-align: center;
+        }
+        .service .row .col-md-4 .kotak{
+            background: #92B5BB;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-top: 100px;
+            width: 369px;
+            text-align: center;
+            height: 423px;
+            transition: .5s;
+        }
+        .service .row .col-md-4 .kotak:hover{
+            box-shadow: 20px 20px 20px rgba(146, 181, 187, 0.4);
+        }
+        .service .row .col-md-4 .kotak img{
+            width: 84px;
+        }
+        .service .row .col-md-4 .kotak h5{
+            font-size: 28px;
+            font-family: inter-semibold;
+        }
+        .service .row .col-md-4 .kotak span{
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 18px;
+        }
+        .service .row .col-md-4 .kotak .parent{
+            width: 268px;
+            margin-top: -20px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 300px;
+            width: 278px;
+        }
+        .send{
+            margin-top: 370px;
+        }
+        .send .row{
+            height: 20vh;
+        }
+        .send .row .col-md-6:nth-child(1){
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .send .row .col-md-6:nth-child(1) .judul{
+            width: 280px;
+            height: 100px;
+        }
+        .send .row .col-md-6:nth-child(1) .judul h4{
+            color: rgba(146, 181, 187, 0.6);
+            /* line-height: 10px; */
+            font-size: 32px;
+        }
+        .send .row .col-md-6:nth-child(1) .judul h1{
+            color: rgba(146, 181, 187, 0.9);
+            font-size: 45px;
+            font-family: inter-semibold;
+        }
+        .send .row .col-md-6:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .send .row .col-md-6:nth-child(2) input{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 2px solid rgba(122, 122, 122, 0.6);
+        }
+        .send .row .col-md-6:nth-child(2) ::-webkit-input-placeholder{
+            font-size: 19px;
+        }
+        .send .row .col-md-6:nth-child(2) .input-box{
+            display: flex;
+            width: 360px;
+            flex-direction: column;
+        }
+        .send .row .col-md-6:nth-child(2) .input-box .btn{
+            background: #92B5BB;
+            color: white;
+            border-radius: 8px;
+            width: 160px;
+            padding: 9px 0;
+            border: none;
+            
+        }
+        .send .row .col-md-6:nth-child(2) .input-box a{
+            align-self: flex-end;
+            margin-top: 15px;
+        }
+        .footer{
+            margin-top: 160px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .footer span{
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        @media (max-width: 1200px){
+            .service .row .col-md-4 .kotak{
+                background: #92B5BB;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                margin-top: 100px;
+                width: 300px;
+                text-align: center;
+                height: 423px;
+                transition: .5s;
+            }
+
+
+        }
+
+        @media ( max-width: 996px ){
+            .service .row .col-md-4 .kotak{
+                background: #92B5BB;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                margin-top: 100px;
+                width: 250px;
+                text-align: center;
+                height: 383px;
+                transition: .5s;
+            }
+            .service .row .col-md-4 .kotak img{
+                width: 70px;
+            }
+            .service .row .col-md-4 .kotak span{
+                font-size: 14px;
+                width: 150px;
+            }
+        }
+
+        @media ( max-width: 990px ){
+            .jumbotron .input-group{
+                width: 70%;
+            }
+            .service{
+                height: 450px;
+            }
+            .service .row .col-md-4{
+                display: flex;
+                justify-content: center;
+            }
+            .service .row .col-md-4 .kotak{
+                background: #92B5BB;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                margin-top: 100px;
+                width: 200px;
+                text-align: center;
+                height: 400px;
+                transition: .5s;
+            }           
+
+            .photo-box{
+                /* background-color: salmon; */
+                height: auto;
+                margin-top: 400px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            } 
+            .photo-box .row{
+                height: auto;
+                /* background-color: #5F5F5F; */
+                display: flex;
+                flex-direction: column;
+            }
+            .photo-box .meja{
+                /* background-color: pink; */
+                margin-top: 50px;
+            }
+            .photo-box .lampu{
+                margin-top: 50px;
+            }
+            .photo-box img{
+                width: 300px;
+            }
+            .photo-box .photo{
+                /* background-color: lightblue; */
+                padding: 100px 0;
+                width: 500px;
+                height: 400px;
+            }
+            .photo-box .tanam{
+                margin-top: -10px;
+            }
+            .photo-box .buku{
+                margin-top: 50px;
+            } 
+            .product-box .card-product .catalog{
+                margin: 0 9px;
+            }
+            .product-box .card-product{
+                display: flex;
+                /* background-color: burlywood; */
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin-top: 80px;
+            }
+            .product-box .navbar{
+                margin-bottom: -50px;
+            }
+            .product-box .card-product .catalog{
+                /* background: rgba(146, 181, 187, 0.2); */
+                width: 250px;
+                margin: 50px 0;
+                border-radius: 8px;
+                height: 226px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .product-box .card-product .desc{
+                width: 250px;
+                margin-left: 4%;
+                /* background-color: aqua; */
+            }
+            .product-box .card-product .harga{
+                width: 250px;
+                margin-left: 4%;
+                /* background-color: #EB5757; */
+            }
+            .navbar .navbar-nav .nav-item{
+                margin: 10px 0;
+                font-size: 20px;
+            }
+           .navbar .navbar-nav{
+               padding: 10px;
+               padding-bottom: 90px;
+           }
+
+        }
+
+        /* tablet */
+        @media ( max-width: 766px ){
+
+            .jumbotron .input-group{
+                width: 100%;
+            }
+            .product-box .card-product .catalog{
+                margin: 40px auto;
+                width: 230px;
+                height: 230px;
+            }
+            .product-box .card-product .harga{
+                width: 230px;
+            }
+            .product-box .card-product .harga h3{
+                font-size: 20px;
+            }
+            .product-box .card-product .harga i{
+                font-size: 13px;
+            }
+            .product-box .navbar{
+                margin-bottom: -50px;
+            }
+            .product-box .card-product{
+                /* background-color: salmon; */
+                justify-content: space-between;
+            }
+            .photo-box{
+                /* background-color: salmon; */
+                height: auto;
+                margin-top: 450px;
+            } 
+            .photo-box .meja{
+                /* background-color: pink; */
+                margin-top: 100px;
+            }
+            .photo-box .lampu{
+                margin-top: 100px;
+            }
+            .photo-box .tanam{
+                margin-top: 20px;
+            }
+            .photo-box .buku{
+                margin-top: 100px;
+            }
+
+
+            .explore {
+                margin-top: 130px;
+                height: auto;
+                width: 95%;
+            }
+            .explore .row3{
+                margin-top: 50px;
+            }
+            .explore .row3 .col-md-7 .photos2{
+                margin-top: 50px;
+            }
+            .explore .row4 .col-md-4:nth-child(2) .photos3{
+                margin-top: 50px;
+            }
+            .explore .row4 .col-md-4:nth-child(3) .photos3{
+                margin-top: 50px;
+            }
+
+
+            .service{
+                height: 1450px;
+            }
+            .service .row .col-md-4{
+                display: flex;
+                justify-content: center;
+            }
+            .service .row .col-md-4 .kotak{
+                background: #92B5BB;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                margin-top: 100px;
+                width: 300px;
+                text-align: center;
+                height: 423px;
+                transition: .5s;
+            }
+            .service .judul h1{
+                font-size: 30px;
+            }
+
+
+
+            
+            .send{
+                margin-top: 300px;
+            }
+            .send .row .col-md-6:nth-child(1) .judul{
+                width: 250px;
+                height: 100px;
+            }
+            .send .row .col-md-6:nth-child(1) .judul h4{
+                font-size: 30px;
+            }
+            .send .row .col-md-6:nth-child(1) .judul h1{
+                font-size: 38px;
+            }
+            .send .row .col-md-6:nth-child(2) .input-box{
+                width: 300px;
+                margin-top: 20px;
+            }
+            .send .row .col-md-6:nth-child(2) .input-box ::-webkit-input-placeholder{
+                font-size: 22px;
+            }
+            .send .row .col-md-6:nth-child(1){
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            .send .row .col-md-6:nth-child(2){
+                align-items: center;
+            }
+            .send .row .col-md-6:nth-child(2) .input-box .btn{
+                background: #92B5BB;
+                margin-top: 10px;
+                color: white;
+                border-radius: 8px;
+                width: 140px;
+                padding: 7px 0;
+                border: none;
+            
+            }
+            .send .row .col-md-6:nth-child(2) .input-box a{
+                align-self: center;
+            }
+
+            .footer{
+                margin-bottom: 20px;
+                margin-top: 190px;
+            }
+            
+
+        }
+
+        /* mobile */
+        @media ( max-width: 578px ){
+            .jumbotron .container h1{
+                font-size: 35px;
+                margin-top: 140px;
+            }
+            .jumbotron .input-group{
+                width: 100%;
+            }
+            .jumbotron .container p{
+                font-size: 16px;
+            }
+            .jumbotron{
+                width: 100%;
+            }
+            .navbar .navbar-nav{
+                padding: 10px 0;
+            }
+            .navbar .navbar-nav .cart{
+                margin-bottom: 85px;
+            }
+            .navbar .navbar-nav .nav-item{
+                margin: 10px 0;
+            }
+            .product-box .card-product .desc{
+                width: auto;
+            }
+            .product-box .navbar-brand{
+                font-size: 35px;
+            }
+            .product-box .card-product .catalog{
+                width: auto;
+                height: 200px;
+                /* background-color: lightblue; */
+                margin: 0 2px;
+            }
+            .product-box{
+                /* background-color: salmon; */
+                height: auto;
+            }
+            .product-box .box-product{
+                /* background-color: pink; */
+                width: 157px;
+            }
+            .product-box .box-product img{
+                width: 130px;
+            }
+            .product-box .card-product{
+                /* background-color: pink; */
+                height: 850px;
+                justify-content: space-evenly;
+            }
+            .product-box .card-product .harga{
+                width: auto;
+                /* background-color: salmon; */
+            }
+            .product-box .card-product .harga i{
+                font-size: 9px;
+            }
+            .product-box .card-product .harga h5{
+                font-size: 17px;
+            }
+            .photo-box{
+                /* background-color: salmon; */
+                height: auto;
+                margin-top: 60px;
+            } 
+            .photo-box .row{
+                height: auto;
+            }
+            .photo-box .meja{
+                /* background-color: pink; */
+                margin-top: 50px;
+            }
+            .photo-box .lampu{
+                margin-top: 50px;
+            }
+            .photo-box img{
+                width: 300px;
+            }
+            .photo-box .photo{
+                /* background-color: lightblue; */
+                padding: 100px 0;
+                width: 100%;
+                height: 400px;
+            }
+            .photo-box .tanam{
+                margin-top: -10px;
+            }
+            .photo-box .buku{
+                margin-top: 50px;
+            }
+
+
+            .explore {
+                margin-top: 100px;
+                width: 90%;
+                height: auto;
+            }
+            .explore .judul{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .explore .judul h1{
+                font-size: 30px;
+                width: 200px;
+            }
+            .explore .judul .link a{
+                margin-top: 20px;
+            }
+            .explore .row3{
+                margin-top: 50px;
+            }
+            .explore .row3 .col-md-7 .photos2{
+                margin-top: 50px;
+            }
+            .explore .row4 .col-md-4:nth-child(2) .photos3{
+                margin-top: 50px;
+            }
+            .explore .row4 .col-md-4:nth-child(3) .photos3{
+                margin-top: 50px;
+            }
+
+
+
+            .service{
+                height: 1510px;
+                margin-top: 180px;
+            }
+            .service .row .col-md-4 .kotak{
+                background: #92B5BB;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                margin-top: 100px;
+                width: 300px;
+                text-align: center;
+                height: 423px;
+                transition: .5s;
+            }
+            .service .judul h1{
+                font-size: 30px;
+            }
+
+
+
+            .send{
+                margin-top: 300px;
+            }
+            .send .row .col-md-6:nth-child(1) .judul{
+                width: 250px;
+                height: 100px;
+            }
+            .send .row .col-md-6:nth-child(1) .judul h4{
+                font-size: 25px;
+            }
+            .send .row .col-md-6:nth-child(1) .judul h1{
+                font-size: 30px;
+            }
+            .send .row .col-md-6:nth-child(2) .input-box{
+                width: 220px;
+                margin-top: 10px;
+            }
+            .send .row .col-md-6:nth-child(2) .input-box ::-webkit-input-placeholder{
+                font-size: 18px;
+            }
+            .send .row .col-md-6:nth-child(1){
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            .send .row .col-md-6:nth-child(2){
+                align-items: center;
+            }
+            .send .row .col-md-6:nth-child(2) .input-box .btn{
+                background: #92B5BB;
+                margin-top: 10px;
+                color: white;
+                border-radius: 8px;
+                width: 140px;
+                padding: 7px 0;
+                border: none;
+            
+            }
+            .send .row .col-md-6:nth-child(2) .input-box a{
+                align-self: center;
+            }
+
+
+            .footer{
+                margin-top: 200px;
+            }
+            .footer span{
+                font-size: 13px;
+            }
+        }
+
+        @media ( max-width: 420px ){
+            .product-box .box-product{
+                /* background-color: pink; */
+                width: 140px;
+            }
+            .photo-box{
+                margin-top: -120px;
+            }
+            .explore{
+                margin-top: 130px;
+                width: 90%;
+            }
+            .product-box .card-product .cat1,
+            .product-box .card-product .cat2{
+                margin-top: -200px;
+            }
+            .product-box .box-product img{
+                width: 100px;
+            }
+            .product-box .card-product .catalog{
+                height: 140px;
+            }
+            .product-box .card-product span{
+            color: rgba(95, 95, 95, 0.6);
+            font-size: 12px;
+            }
+            .product-box .card-product h3{
+            font-size: 19px;
+            }
+            .product-box .card-product h5{
+            font-size: 16px;
+            }
+            .product-box .card-product .harga i{
+            color: #F2C94C;
+            font-size: 6px;
+            }
+            .explore .row3 .col-md-5 .photos1 .text,
+            .explore .row3 .col-md-7 .photos2 .text,
+            .explore .row4 .col-md-4 .photos3 .text{
+            width: 220px;
+            z-index: 99999;
+            padding-left: 35px;
+            padding-bottom: 30px;
+            }
+            .explore .row3 .col-md-5 .photos1 span,
+            .explore .row3 .col-md-7 .photos2 span{
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            }
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" data-aos="fade-right">
+        <div class="container pt-3">
+            <a class="navbar-brand" href="#"><img src="assets/img/SPACEROOM.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown mr-5">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Product
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown mr-5">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Idea
+                        </a>
+                        <div class="dropdown-menu mr-5" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <button type="button" class="btn cart">
+                            My cart <span class="badge badge-light ml-1 p-2">3</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="container" data-aos="fade-up">
+            <h1 class="display-4">Explore Furniture <br> for your Comfort Room</h1>
+            <p class="lead mt-4">Look for a variety of interior needs and decorating your <br> room for a more
+                productive atmosphere</p>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search Product . . . ."
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container product-box" data-aos="fade-up">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">New Product</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link mr-3" href="#">All product</a>
+                    <a class="nav-link mr-3 chair" href="#">Chair</a>
+                    <a class="nav-link mr-3" href="#">Carpet</a>
+                    <a class="nav-link mr-3" href="#">Floor lamp</a>
+                    <a class="nav-link mr-3" href="#">Dring table</a>
+                    <a class="nav-link" href="#">Wardrobe</a>
+                </div>
+            </div>
+        </nav>
+        <div class="card-product">
+            <div class="box-product" data-aos="fade-up">
+                <div class="catalog">
+                    <img src="assets/img/GRÖNLID.png">
+                </div>
+                <div class="desc">
+                    <h3 class="font-weight-bold mt-4">Gronlid</h3>
+                    <span>Armchair, Sporda dark gray</span>
+                </div>
+                <div class="harga d-flex mt-4 justify-content-between align-content-center">
+                    <h5>$480.24</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="box-product" data-aos="fade-up">
+                <div class="catalog">
+                    <img src="assets/img/STRANDMON.png">
+                </div>
+                <div class="desc">
+                    <h3 class="font-weight-bold mt-4">STRANDMON</h3>
+                    <span>Wing chair, Nordvalla red</span>
+                </div>
+                <div class="harga d-flex mt-4 justify-content-between align-content-center">
+                    <h5>$310.21</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="box-product" data-aos="fade-up">
+                <div class="catalog cat1">
+                    <img src="assets/img/EKOLSUND.png">
+                </div>
+                <div class="desc">
+                    <h3 class="font-weight-bold mt-4">EKOLSUND</h3>
+                    <span>Gunnared light brown-pink</span>
+                </div>
+                <div class="harga d-flex mt-4 justify-content-between align-content-center">
+                    <h5>$502.22</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="box-product" data-aos="fade-up">
+                <div class="catalog cat2">
+                    <img src="assets/img/EKOLSUND2.png">
+                </div>
+                <div class="desc">
+                    <h3 class="font-weight-bold mt-4">EKOLSUND</h3>
+                    <span>Easy chair, Gunnared dark gray</span>
+                </div>
+                <div class="harga d-flex mt-4 justify-content-between align-content-center">
+                    <h5>$502.22</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container photo-box">
+        <div class="row row1">
+            <div class="col-md-3">
+                <div class="photo" data-aos="fade-up">
+                    <div class="badge">Chair</div>
+                    <img src="assets/img/Odger 1.png">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="photo meja" data-aos="fade-up">
+                    <div class="badge">Dining table</div>
+                    <img src="assets/img/Tarendo 1.png">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="photo lampu" data-aos="fade-up">
+                    <div class="badge">Table lamp</div>
+                    <img src="assets/img/Arod 1.png">
+                </div>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col-md-5">
+                <div class="photo tanam" data-aos="fade-up">
+                    <div class="badge">Decoration</div>
+                    <img src="assets/img/FEJKA 1.png">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="photo buku" data-aos="fade-up">
+                    <div class="badge">Bookshelf</div>
+                    <img src="assets/img/Billy 1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container explore">
+        <div class="judul" data-aos="fade-up">
+            <h1>Explore our inspiration</h1>
+            <div class="link">
+                <a href="">All</a>
+                <a href="" class="ins">inspiration</a>
+                <a href="">Collections</a>
+            </div>
+        </div>
+        <div class="row row3">
+            <div class="col-md-5">
+                <div class="photos1" data-aos="fade-up">
+                    <div class="text">
+                        <h3>Our tips</h3>
+                        <span>tips on arranging a living room in a minimalist style</span>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="photos2" data-aos="fade-up">
+                    <div class="text">
+                        <h3>Our tips</h3>
+                        <span>tips on arranging a living room in a classic style</span>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row row4">
+            <div class="col-md-4">
+                <div class="photos3" data-aos="fade-up">
+                    <div class="text">
+                        <h3>Our tips</h3>
+                        <span>tips on choosing minimalist chairs for narrow rooms</span>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photos3" data-aos="fade-up">
+                    <div class="text">
+                        <h3>Our tips</h3>
+                        <span>tips on choosing classic chairs for narrow rooms</span>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photos3" data-aos="fade-up">
+                    <div class="text">
+                        <h3>Our tips</h3>
+                        <span>tips on arranging a room that seems modern and comfortable</span>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid service">
+        <div class="judul" data-aos="fade-up"><h1>Service for your convenience</h1></div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="kotak" data-aos="fade-up">
+                    <div class="parent">
+                        <img src="assets/img/bi_truck.png">
+                        <h5>Delivery</h5>
+                        <span>We deliver goods according to existing procedures</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="kotak" data-aos="fade-up">
+                    <div class="parent">
+                        <img src="assets/img/Vector.png">
+                        <h5>Assembly</h5>
+                        <span>We assemble goods according to existing procedures</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="kotak" data-aos="fade-up">
+                    <div class="parent">
+                        <img src="assets/img/credit-card.png">
+                        <h5>Payment</h5>
+                        <span>Payment can be made in many ways for your convenience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container send" data-aos="fade-up">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="judul">
+                    <h4>Join Our</h4>
+                    <h1>news latters</h1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-box">
+                    <input type="text" placeholder="Your email">
+                    <a href=""><div class="btn">Send</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer">
+        <div class="row">
+            <div class="col-md-12">
+                <span>© 2020 Spaceroom | Design @adebbbagus_ Slicing By @dzakimuzh</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="owlcarousel/docs/assets/vendors/jquery.min.js"></script>
+    <script src="owlcarousel/dist/owl.carousel.js"></script>
+    <script>
+        AOS.init({
+          offset: 200,
+          duration: 500,
+        });
+        // $(window).scroll(function(){
+        // $('nav').toggleClass('scrolled', $(this).scrollTop() > 340);
+        // });
+      
+      </script>
+</body>
+
+</html>
